@@ -141,7 +141,7 @@ def background():
 def main():
   bt = Thread(target=background)
   bt.start()
-  socketname = "/home/stuart/pythonsock"
+  socketname = os.getenv("HOME") + "/pythonsock"
   timeout = 600
   # Register to have the Milter factory create instances of your class:
   Milter.factory = myMilter
